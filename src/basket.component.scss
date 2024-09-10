@@ -1,0 +1,39 @@
+.wallet {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 250px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #dc3545; /* Red color for the remove button */
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+.remove-button:hover {
+  color: #a71d2a; /* Darker red on hover */
+}
+
+hr {
+  margin: 20px 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}

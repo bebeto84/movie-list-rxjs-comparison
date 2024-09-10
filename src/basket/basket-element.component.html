@@ -1,0 +1,10 @@
+<div class="basket-item">
+  <p>
+    <strong>{{ movie.title }}</strong
+    >: ${{ movie.price | number : '1.2-2' }}
+    <button (click)="onRemove()" class="remove-button">
+      <i class="fas fa-trash-alt"></i>
+      <!-- FontAwesome trash icon -->
+    </button>
+  </p>
+</div>

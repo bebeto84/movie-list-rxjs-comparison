@@ -1,0 +1,17 @@
+<div class="movie-container">
+  <div
+    *ngFor="let movie of movies$ | async"
+    class="movie-card"
+    [ngClass]="{ 'in-basket': isMovieInBasket(movie.id) | async }"
+  >
+    <img [src]="movie.poster_path" alt="{{ movie.title }}" />
+    <h3>{{ movie.title }}</h3>
+    <p>Price: ${{ movie.price | number : '1.2-2' }}</p>
+    <ng-container *ngIf="isMovieInBasket(movie.id) | async; else notAddeds">
+      <button (click)="removeFromBasket(movie)">Remove from Basket</button>
+    </ng-container>
+    <ng-template #notAddeds>
+      <button (click)="addToBasket(movie)">Add to Basket</button>
+    </ng-template>
+  </div>
+</div>

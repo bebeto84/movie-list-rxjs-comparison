@@ -1,0 +1,12 @@
+<div class="wallet">
+  <h2>Your Basket</h2>
+  <div class="basket-item" *ngFor="let movie of basket$ | async">
+    <p><strong>{{ movie.title }}:</strong> ${{ movie.price | number: '1.2-2' }}</p>
+    <button (click)="removeFromBasket(movie)" class="remove-button">
+      <i class="fas fa-trash-alt"></i> <!-- FontAwesome trash icon -->
+    </button>
+  </div>
+  <hr />
+  <p><strong>Total Price: ${{ totalPrice$ | async | number: '1.2-2' }}</strong></p>
+  <p><strong>Total Discount: ${{ totalDiscount$ | async | number: '1.2-2' }}</strong></p>
+</div>
